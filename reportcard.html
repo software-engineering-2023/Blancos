@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="reportcard.css">
+
+        <title>
+            Report Credit Card 
+        </title>
+        <body>
+            <h1> Report Credit Card </h1>
+            <label>Full Name</label>
+            <input type="text" placeholder="Your Full Name" id="name" name="name">
+            <br/>
+            <label>Credit Card Number</label>
+            <input type="text" placeholder="Your Credit Card Number" id="cnum" name="cnum">
+            <br/>
+            <label for="reason">Choose a reason:</label>
+             <select id="reason" name="reason">
+            <option value="">Select a Reason</option>
+            <option value="theft">Theft</option>
+            <option value="damage">Damage</option>
+            <option value="loss">Loss</option>
+            </select>
+            <br/>
+            <label>Description</label>
+            <input type="text" placeholder="Mention When Did The Problem Occur" id="desc" name="desc">
+            <br/>
+            <label>Date of Report(Today)</label>
+            <input type="date" placeholder="Date" id="date" name="date">
+            <br/>
+            <script>
+                function validateForm(){
+                    
+                    if(document.getElementById("name").value === ""){
+                        alert("Enter Name");
+                    }
+                    else if(document.getElementById("cnum").value === ""){
+                        alert("Enter Credit Card Number");
+                    }
+                    else if(document.getElementById("reason").value === ""){
+                        alert("Select Reason");
+                    }
+                    else if(document.getElementById("date").value === ""){
+                        alert("Select Date");
+                    }
+                    else{
+                        alert("Report Submitted!")
+                    }
+            }
+            </script>
+            <br/>
+            <button class ="btn" type="button" onclick="validateForm()">Report</button>
+            <button class ="btn" type="button" onclick="window.location.href='replacement.html'" >Apply for replacement</button>
+            <button class ="btn" type="button" onclick="window.location.href='homepage.html'" >Go Back to Home Page</button>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="replacement.css">
+
+        <title>
+            Apply for replacemnet credit card
+        </title>
+        <body>
+            <div class = "container">
+           <form>
+            <h1>Apply for replacement credit card</h1>
+            <p>Please fill this form to apply for a replacement credit card</p>
+            <hr>
+            <label>First Name</label>
+            <input type="text" placeholder="Your First Name" id = "firstname" name ="firstname">
+            <br/>
+            <label>Last Name</label>
+            <input type="text" placeholder="Your Last Name" id = "lastname" name ="lastname">
+            <br/>
+            <label>National ID</label>
+            <input type="text" placeholder="Your National ID" id = "nationalid" name ="nationalid">
+            <br/>
+            <label>Date of Birth</label>
+            <input type="date" placeholder="Your Birth Date" id = "birth" name ="birth">
+            <br/>
+            <label>Email</label>
+            <input type="email" placeholder="Your Email Address" id = "email" name ="email">
+            <br/>
+            <label>Phone</label>
+            <input type="text" placeholder="Your Phone number" id = "phone" name ="phone">
+            <br/>
+            <label>Address</label>
+            <input type="text" placeholder="Your Address" id = "address" name ="address">
+            <br/>
+            <label>Account Number</label>
+            <input type="text" placeholder="Your Account Number" id = "accnum" name ="accnum">
+            <br/>
+            <label>Income</label id="inc" name="inc">
+            <input type="text" placeholder="Reason">
+            <br/>
+            <label>Reason for replacement</label id="reason" name="reason">
+            <input type="text" placeholder="Reason">
+            <br/>
+            <input type = "checkbox">Female
+            <input type = "checkbox">Male 
+             <br/>
+            <input type = "checkbox">I agree to your terms & conditions
+            <br/>
+            <button class ="btn" type="button" onclick="validateForm()" >Apply!</button>
+            <button class ="btn" type="button" onclick="window.location.href='homepage.html'" >Go Back to Home Page</button>
+            <script>
+                function validateForm() {
+                       if(document.getElementById("firstname").value==""){
+                           alert("Enter First Name!");
+                       }
+                       else if(document.getElementById("lastname").value == ""){
+                           alert("Enter Last Name!");
+                       }
+                       else if(document.getElementById("nationalid").value == ""){
+                           alert("Enter National ID!");
+                       }
+                       else if(document.getElementById("birth").value == ""){
+                           alert("Enter Date of Birth!");
+                       }
+                       else if(document.getElementById("email").value == ""){
+                           alert("Enter Email!");
+                       }
+                       else if(document.getElementById("phone").value == ""){
+                           alert("Enter Phone Number!");
+                       }
+                       else if(document.getElementById("address").value == ""){
+                           alert("Enter Address!");
+                       }
+                       else if(document.getElementById("accnum").value == ""){
+                           alert("Enter Account Number!");
+                       }
+                       else if(document.getElementById("inc").value == ""){
+                           alert("Enter Income!");
+                       }
+                       else if(document.getElementById("reason").value == ""){
+                           alert("Enter Reason!");
+                       }
+                       else{
+                           alert("Applied!");
+                       }
+               }
+              </script>
+            <br/>
+            
+        </body>
+    </html>
+    </head>
+</html>

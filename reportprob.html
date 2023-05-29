@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="reportprob.css">
+
+        <title>
+            Report Problem
+        </title>
+        <body>
+            <h1> Report Problem </h1>
+            <label>Full Name</label>
+            <input type="text" placeholder="Your Full Name" id="name" name="name">
+            <br/>
+            <label for="ddreason">Choose a reason:</label>
+             <select id="reason" name="reason">
+            <option value="">Select a Reason</option>
+            <option value="notloading">Website Not Loading</option>
+            <option value="messages">Error Messages</option>
+            <option value="payissues">Payment Issues</option>
+             <option value="accissues">Account Issues</option>
+             <option value="ccissues">Credit Card Issues</option>
+            </select>
+            <br/>
+            <label>Description</label>
+            <input type="text" placeholder="Describe Your Problem" id="desc" name="desc">
+            <br/>
+            <label>Date of Report (Today)</label>
+            <input type="date" placeholder="Date" id="date" name="date">
+            <br/>
+            <button class ="btn" type="button" onclick="validateForm()" >Submit Report</button>
+            <button class ="btn" type="button" onclick="window.location.href='homepage.html'" >Go Back to Home Page</button>
+            <script>
+                function validateForm(){
+                    
+                    if(document.getElementById("name").value === ""){
+                        alert("Enter Name");
+                    }
+                    else if(document.getElementById("reason").value === ""){
+                        alert("Select Reason");
+                    }
+                    else if(document.getElementById("date").value === ""){
+                        alert("Enter Date");
+                    }
+                    else{
+                        alert("Report Submitted!")
+                    }
+            }
+            </script>
+        </body>
+    </head>
+</html>

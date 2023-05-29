@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="setreminders.css">
+
+        <title>
+            Reminders
+        </title>
+        <body>
+            <h1>Set Reminder for Bills</h1>
+            <br/>
+            <label for="type">Choose a type:</label>
+             <select id="type" name="type">
+                <option value="">Select Type of Bill</option>
+            <option value="water">Water</option>
+            <option value="gas">Gas</option>
+            <option value="electricity">Electricity</option>
+             <option value="telephone">Telephone</option>
+            </select>
+            <br/>
+            <label for="reminders">Choose a time:</label>
+             <select id="reminder" name="reminder">
+                <option value="">Select a Time for Reminder </option>
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+             <option value="annually">Annually</option>
+            </select>
+            <br/>
+            <button class ="btn" type="button" onclick="showAlert()">Set!</button>
+           
+            <button class ="btn" type="button" onclick="window.location.href='homepage.html'" >Go Back to Home Page</button>
+        </body>
+        <script>
+           function showAlert() {
+            if(document.getElementById("type").value=""){
+                alert("Select Type of Bill");
+            }
+            else if(document.getElementById("reminders").value=""){
+                alert("Select a Time for Reminder");
+            }
+             else {
+                alert("Reminder set!");
+            } 
+    }
+        </script>
+        </body>
+        
+    </head>
+</html>
