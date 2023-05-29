@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="banker.css">
+
+        <title>
+            Banker Page
+        </title>
+        <body>
+            <h1>Welcome!</h1>
+            <label>View Clients</label><br/>
+            <button class ="btn"  type="button" onclick="window.location.href='viewclients.html'">View Clients</button>
+            <br/><br/>
+            <label>View Client Details</label><br/>
+            <button class ="btn"  type="button" onclick="window.location.href='viewclientdetails.html'">View Client Details</button>
+            <br/><br/>
+            <label>View Client Bank Accounts</label><br/>
+            <button class ="btn"  type="button" onclick="window.location.href='viewclientaccount.html'">View Client Details</button>
+            <br/><br/>
+            <label>View a Bank Account</label><br/>
+            <button class ="btn"  type="button" onclick="window.location.href='viewanaccount.html'">View Client Details</button>
+            <br/><br/>
+            <label>View Client Credit Cards</label><br/>
+            <button class ="btn"  type="button" onclick="window.location.href='viewclientcards.html'">View Client Credit Cards</button>
+            <br/><br/>
+            <label>View a Credit Card </label><br/>
+            <button class ="btn"  type="button" onclick="window.location.href='viewacreditcard.html'">View a Credit Card</button>
+            <br/><br/>
+            <label>View Client Loans </label><br/>
+            <button class ="btn"  type="button" onclick="window.location.href='viewclientloans.html'">View Client Loans</button>
+            <br/><br/>
+            <label>View a Loan </label><br/>
+            <button class ="btn"  type="button" onclick="window.location.href='viewaloan.html'">View a Loan</button>
+            <br/><br/>
+            <label>View Requests</label><br/>
+            <button class ="btn"  type="button" onclick="window.location.href='requests.html'">View Requests</button>
+            <br/><br/>
+            <label>View Credit Card Reports</label><br/>
+            <button class ="btn"  type="button" onclick="window.location.href='bankerreports.html'">View Reports</button>
+            <br/><br/>
+            <label>Send Reminders for Credit Card Payment</label><br/>
+            <button class ="btn"  type="button" onclick="showAlert()">Send Reminders</button>
+            <br/><br/>
+            <label>Send Reminders for Loan Payment</label><br/>
+            <button class ="btn"  type="button" onclick="showAlert()">Send Reminders</button>
+            <br/><br/>
+            <label>Send Reminders for Bills Payment</label><br/>
+            <button class ="btn"  type="button" onclick="showAlert()">Send Reminders</button>
+            <br/><br/>
+            <label>Send Notifications About Bank Ancouncment</label><br/>
+            <button class="btn" type="button" onclick="showNotification()">Send Notification</button>
+              <br /><br />
+            <script>
+                function showAlert(){
+                    alert("Reminders Sent!");
+                }
+                function showNotification() {
+                // Create a new Notification object
+                var notification = new Notification("Banker Notification", {
+                 body: "You have a new message from the bank.",
+                });
+                 // Close the notification after a few seconds
+                 setTimeout(notification.close.bind(notification), 5000);
+                 alert("Notification Sent!")
+                }
+            </script>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="bankaccount.css">
+
+        <title>
+            Bank Accounts
+        </title>
+        <body>
+            <h1> Enter Your Account Number</h1>
+            <br/>
+            <input type="text" placeholder="Your Account Number" id = "accnum" name ="accnum">
+            <br/>
+            <button class ="btn" type="button" onclick="validateForm()" >View Info!</button>
+            <button class ="btn" type="button"  onclick="window.location.href='applyforaccount.html'" >Apply!</button>
+            <button class ="btn" type="button"  onclick="window.location.href='accounttransaction.html'" >View Transactions!</button>
+            <script>
+                function validateForm(){
+                    
+                    if(document.getElementById("accnum").value === ""){
+                        alert("Enter Account Number!");
+                    }
+                    else{
+                        window.location.href="bankaccountinfo.html";
+                    }
+            }
+            </script>
+            
+        </body>
+    </head>
+</html>

@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="admin.css">
+
+        <title>
+            Admin Page
+        </title>
+        <body>
+            <h1>Welcome!</h1>
+            <label>View Reports</label><br/>
+            <button class ="btn"  type="button" onclick="window.location.href='adminreports.html'">View Reports</button>
+            <br/><br/>
+            <label>View Users Accounts</label><br/>
+            <button class ="btn"  type="button" onclick="window.location.href='useraccount.html'">View Accounts</button>
+            <br/><br/>
+            <label>View Bankers Accounts</label><br/>
+            <button class ="btn"  type="button" onclick="window.location.href='bankeraccount.html'">View Accounts</button>
+            <br/> <br/>
+            <label>Send Notifications that Issue is solved</label><br/>
+            <button class="btn" type="button" onclick="showNotification()">Send Notification </button>
+              <br /><br />
+              <script>
+                function showNotification() {
+                // Create a new Notification object
+                var notification = new Notification("Admin Notification", {
+                 body: "Issue Resolved.",
+                });
+                 // Close the notification after a few seconds
+                 setTimeout(notification.close.bind(notification), 5000);
+                //  alert("Notification Sent!")
+                }
+              </script>
+        </body>
+    </head>
+</html>

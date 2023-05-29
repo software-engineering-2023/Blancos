@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: url("images/background.png");
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin-top: 20px;
+  }
+  
+  select {
+    width: 250px;
+    padding: 5px;
+  }
+  
+  #option1,
+  #option2 {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .var {
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #555;
+  }
+  

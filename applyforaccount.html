@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="applyforaccount.css">
+
+        <title>
+            Apply for bank account
+        </title>
+        <body>
+            <div class = "container">
+           <form>
+            <form onsubmit="return validateForm()" method="post">
+            <h1>Apply for bank account</h1>
+            <p>Please fill this form to apply for a bank account</p>
+            <hr>
+            <label>First Name</label>
+            <input type="text" placeholder="Your First Name" id="firstname" name="firstname" >
+            <br/>
+            <label>Last Name</label>
+            <input type="text" placeholder="Your Last Name" id="lastname" name="lastname">
+            <br/>
+            <label>National ID</label>
+            <input type="text" placeholder="Your National ID" id="nationalid" name="nationalid">
+            <br/>
+            <label>Date of Birth</label>
+            <input type="date" placeholder="Your Birth Date" id="birth" name="birth">
+            <br/>
+            <label>Email</label>
+            <input type="email" placeholder="Your Email Address" id="email" name="email">
+            <br/>
+            <label>Phone</label>
+            <input type="text" placeholder="Your Phone number" id="phone" name="phone">
+            <br/>
+            <label>Address</label>
+            <input type="text" placeholder="Your Address" id="address" name="address">
+            <br/>
+            <label>Income</label>
+            <input type="text" placeholder="Your Income" id="inc" name="inc">
+        
+            <br/>
+            <input type = "checkbox">Female
+            <input type = "checkbox">Male 
+             <br/>
+            <input type = "checkbox">I agree to your terms & conditions
+            <br/>
+            <script>
+                function validateForm() {
+                var firstname = document.getElementById("firstname").value;
+                var lastname = document.getElementById("lastname").value;
+                var nationalid = document.getElementById("nationalid").value;
+                var birth = document.getElementById("birth").value;
+                var phone = document.getElementById("phone").value;
+                var address = document.getElementById("address").value;
+                var inc = document.getElementById("inc").value;
+                 if(firstname == ""){
+                    alert("Enter First Name!");
+                }
+                else if(lastname == ""){
+                    alert("Enter Last Name!");
+                }
+                else if(nationalid == ""){
+                    alert("Enter National ID!");
+                }
+                else if(birth == ""){
+                    alert("Enter Date of Birh!");
+                }
+                else if(phone == ""){
+                    alert("Enter Phone Number!");
+                }
+                else if(address == ""){
+                    alert("Enter Address!");
+                }
+                else if(inc == ""){
+                    alert("Enter Income!");
+                }
+                else{
+                    alert("Applied!");
+                }
+            }
+            </script>
+            <button class ="btn" type="button" onclick="validateForm()" >Apply!</button>
+            <button class ="btn"  type="button"onclick="window.location.href='homepage.html'" >Go Back to Home Page</button>
+        </form>
+
+        </body>
+    </head>
+</html>

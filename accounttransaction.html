@@ -1,0 +1,70 @@
+<html>
+    <head>
+        
+        <title>
+            Bank Accounts Traansactions
+        </title>
+        <body>
+            <link rel="stylesheet" type = "text/css" href = "accounttransaction.css">
+            <h1>Transactions</h1>
+            <label for="num">Choose Account Number:</label>
+             <select id="accnum" name="accnum">
+            <option value="">Select Acount Number</option>
+            <option value="a1">1234</option>
+            <option value="a2">9876</option>
+            </select>
+            <br/>
+            <label>
+                <div id="option1" style="display:none">
+                    Statement Period: April 1,2023 - April 30,2023 <br/><br/>
+                    Transaction 1 <br/>
+                    Date: <var>01/04/2023</var> <br/>
+                    Type of Transaction: <var>ATM Withdrawal</var> <br/>
+                    Amount: <var>100 EGP</var> <br/><br/>
+                    Transaction 2 <br/>
+                    Date: <var>10/04/2023 </var><br/>
+                    Type of Transaction: <var>Deposit </var><br/>
+                    Amount: <var>2500 EGP </var><br/><br/>
+                    Transaction 3 <br/>
+                    Date: <var>30/04/2023 </var><br/>
+                    Type of Transaction: <var>Monthly Service Fee </var><br/>
+                    Amount: <var>10 EGP </var><br/>
+
+                </div> 
+                <div id="option2" style="display:none">
+                    Statement Period: April 1,2023 - April 30,2023 <br/><br/>
+                    Transaction 1 <br/>
+                    Date: <var>12/04/2023 </var><br/>
+                    Type of Transaction: <var>Transfer from Domestic Account</var> <br/>
+                    Amount:<var> 9856 EGP </var><br/><br/>
+                    Transaction 2 <br/>
+                    Date: <var>24/04/2023</var> <br/>
+                    Type of Transaction: <var>Withdrawal</var> <br/>
+                    Amount: <var>1700 EGP</var> <br/><br/>
+                    Transaction 3 <br/>
+                    Date: <var>30/04/2023</var> <br/>
+                    Type of Transaction: <var>Monthly Service Fee</var> <br/>
+                    Amount: <var>10 EGP</var> <br/><br/>
+                </div> 
+            </label>
+            <button class ="btn" type="button" onclick="viewTransaction()" >View Transaction</button>
+            <button class ="btn" type="button" onclick="window.location.href='homepage.html'" >Go Back To Home Page</button>
+
+            <script>
+                function viewTransaction(){
+                    option1.style.display = "none";
+                    option2.style.display = "none";
+                    if(document.getElementById("accnum").value === ""){
+                        alert("Select Account Number");
+                    }
+                    if(document.getElementById("accnum").value === "a1"){
+                        option1.style.display = "block";
+                    }
+                    else if(document.getElementById("accnum").value === "a2"){
+                        option2.style.display = "block";
+                    }
+                }
+            </script>
+        </body>
+    </head>
+</html>
