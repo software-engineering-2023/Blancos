@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="login.css">
+        <title>
+            Login 
+        </title>
+        <style>
+            body{
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            }
+            input[type="email"], input[type="password"]{
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0; /* 8px 0 */
+                display:inline-block ;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+            button{
+                background-color:blueviolet;
+                color:white;
+                padding: 16px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor:pointer;
+                width: 100%;
+            }
+            button.hover{
+                opacity: 1;
+            }
+            .imgcontainer{
+                text-align: center;
+                margin: 24px 0 12px 0;
+                position:relative;
+            }
+            img.avatar{
+                width:30%;
+                border-radius: 40%;
+            }
+            .modal{
+                background-color: black;
+                overflow: auto;
+                padding-top: 60px;
+                width:100%;
+                height: 100%;
+                top:0%;
+                left:0%;
+                z-index: 1;
+                position: fixed;
+            }
+            .modal-content{
+                background-color: white;
+                margin: 15% auto ;
+                /* border: 1px solid #888; */
+                width: 100%; /*controls white background*/
+            }
+            .container{
+                padding: 16px;
+            }
+            span.psw{
+                float:right;
+                padding-top: 16px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="container">
+            <form onsubmit="return validateForm()" method="post">
+                <input type="text" placeholder="Enter Username" id="username" name="username">
+                <input type="password" placeholder="Enter Password" id="password" name="password">
+                <button class="btn" type="submit" >Login</button>
+                <p>Don't have an account? <a href ="signup.html">Sign Up!</a></p>
+            </form>
+        </div>
+        <script>
+            function validateForm() {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                if (username == "user" && password == "userpassword") {
+                    window.location.href = "homepage.html";
+                    return false;
+                }
+                else if (username == "banker" && password == "bankerpassword") {
+                    window.location.href = "banker.html";
+                    return false;
+                }
+                else if (username == "admin" && password == "adminpassword") {
+                    window.location.href = "admin.html";
+                    return false;
+                }
+                else if(username == ""){
+                    alert("Enter Username!");
+                }
+                if(password == ""){
+                    alert("Enter Password!");
+                }
+                else {
+                    alert("Invalid username or password!");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>
