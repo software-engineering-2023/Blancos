@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="viewacreditcard.css">
+
+    <title>
+        Client Credit Card
+    </title>
+    <body>
+        <h1>Client Credit Cards</h1>
+        <label>Enter Client Name</label>
+            <input type="text" placeholder="Client Name" id="name" name="name" >
+            <br/>
+            <label>Enter Credit Card Number</label>
+            <input type="text" placeholder="Credit Card Number" id="num" name="num" >
+            <br/>
+            <div id="c1" style="display:none">
+                Name: <var>Farida Mousa</var><br/>
+                Credit Card Number: <var>1589</var><br/>
+                Balance: <var>540000</var><br/>
+                Rate: <var>10%</var><br/>
+                Amount Due: <var>5400</var><br/>
+                Expiration Date: <var>5/25</var><br/>
+                Type: <var>Supplmentary</var><br/>
+                Points: <var>1000</var><br/>
+            </div> 
+            <div id="c2" style="display:none">
+                Name: <var>Farida Mousa</var><br/>
+                Credit Card Number: <var>1586</var><br/>
+                Balance: <var>80000</var><br/>
+                Rate: <var>15%</var><br/>
+                Amount Due: <var>1200</var><br/>
+                Expiration Date: <var>10/24</var><br/>
+                Type: <var>Main</var><br/>
+                Points: <var>25000</var><br/>
+                
+            </div> 
+            <div id="c3" style="display:none">
+                Name: <var>Aaron Warner</var><br/>
+                Credit Card Number: <var>2300</var><br/>
+                Balance: <var>60000</var><br/>
+                Rate: <var>10%</var><br/>
+                Amount Due: <var>6000</var><br/>
+                Expiration Date: <var>01/26</var><br/>
+                Type: <var>Main</var><br/>
+                Points: <var>55000</var><br/>
+            </div> 
+            <button class ="btn"  type="button" onclick="showDetails()">Show Client Credit Card</button> 
+            <button class ="btn"  type="button" onclick="window.location.href='banker.html'">Go Back To Home Page</button>
+            <script>
+                function showDetails(){
+                    c1.style.display = "none";
+                    c2.style.display = "none";
+                    if(document.getElementById("name").value == ""){
+                        alert("Enter a Name");
+                    }
+                    else if(document.getElementById("num").value == ""){
+                        alert("Enter Credit Card Number");
+                    }
+                    else if(document.getElementById("name").value == "Farida Mousa"){
+                        if(document.getElementById("num").value == "1589"){
+                            c1.style.display = "block";
+                            c2.style.display = "none";
+                            c3.style.display = "none";
+                        }
+                        else if(document.getElementById("num").value == "1586"){
+                            c2.style.display = "block";
+                            c1.style.display = "none";
+                            c3.style.display = "none";
+                        }
+                    }
+                    else if(document.getElementById("name").value == "Aaron Warner"){
+                            c3.style.display = "block";
+                            c1.style.display = "none";
+                            c2.style.display = "none";
+                    }
+
+                }
+            </script>
+    </body>
+  </head>  
+</html>

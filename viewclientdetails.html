@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="viewclientdetails.css">
+
+    <title>
+        Clients Details
+    </title>
+    <body>
+        <h1>Clients</h1>
+        <label>Enter Client Name</label>
+            <input type="text" placeholder="Client Name" id="name" name="name" >
+            <br/>
+            <div id="c1" style="display:none">
+                Name: <var>Farida Mousa</var><br/>
+                National ID: <var> 17656432</var><br/>
+                Date of Birth: <var>20/08/2002</var><br/>
+                Gender: <var>Female </var><br/>
+                Email: <var>farida@gmail.com</var><br/>
+                Phone: <var>0126473887</var><br/>
+                Address: <var>Nasr City</var>v
+            </div> 
+            <div id="c2" style="display:none">
+                Name: <var>Aaron Warner</var><br/>
+                National ID: <var> 345678989544</var><br/>
+                Date of Birth: <var>24/04/2002</var><br/>
+                Gender: <var>Male </var><br/>
+                Email: <var>aaron@gmail.com</var><br/>
+                Phone: <var>01008765443</var><br/>
+                Address: <var>New Cairo</var><br/>
+            </div> 
+            <button class ="btn"  type="button" onclick="showDetails()">Show Client Details</button> 
+            <button class ="btn"  type="button" onclick="window.location.href='banker.html'">Go Back To Home Page</button>
+            <script>
+                function showDetails(){
+                    c1.style.display = "none";
+                    c2.style.display = "none";
+                    if(document.getElementById("name").value == ""){
+                        alert("Enter a Name");
+                    }
+                    else if(document.getElementById("name").value == "Farida Mousa"){
+                        c1.style.display = "block";
+                    }
+                    else if(document.getElementById("name").value == "Aaron Warner"){
+                        c2.style.display = "block";
+                    }
+
+                }
+            </script>
+    </body>
+  </head>  
+</html>

@@ -1,0 +1,46 @@
+<html>
+  <head>
+    
+    <link rel="stylesheet" href="viewaloan.css">
+    <title>
+        Client Loan
+    </title>
+    <body>
+        <h1>Client Loan</h1>
+        <label>Enter Client Name</label>
+            <input type="text" placeholder="Client Name" id="name" name="name" >
+            <br/>
+            <div id="c1" style="display:none">
+                Name: <var>Farida Mousa</var><br/>
+                Account Number: <var>1234</var><br/>
+                Amount: <var>600000</var><br/>
+                Type: <var>Personal</var><br/>
+                Rate: <var>15%</var><br/>
+                Duration: <var>5 years</var><br/>
+                Expiration Date: <var>5/28</var><br/>
+            </div> 
+            <div id="c2" style="display:none">
+                Name: <var>Aaron Warner</var><br/>
+                Client has no loans.
+            </div> 
+            <button class ="btn"  type="button" onclick="showDetails()">Show Client Loan</button> 
+            <button class ="btn"  type="button" onclick="window.location.href='banker.html'">Go Back To Home Page</button>
+            <script>
+                function showDetails(){
+                    c1.style.display = "none";
+                    c2.style.display = "none";
+                    if(document.getElementById("name").value == ""){
+                        alert("Enter a Name");
+                    }
+                    else if(document.getElementById("name").value == "Farida Mousa"){
+                            c1.style.display = "block";
+                    }
+                    else if(document.getElementById("name").value == "Aaron Warner"){
+                            c2.style.display = "block";
+                    }
+
+                }
+            </script>
+    </body>
+  </head>  
+</html>

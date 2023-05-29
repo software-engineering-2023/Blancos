@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="viewanaccount.css">
+
+    <title>
+        Client Bank Account
+    </title>
+    <body>
+        <h1>Client Bank Account</h1>
+        <label>Enter Client Name</label>
+            <input type="text" placeholder="Client Name" id="name" name="name" >
+            <br/>
+            <label>Enter Bank Account Number</label>
+            <input type="text" placeholder="Account Number" id="num" name="num" >
+            <br/>
+            <div id="c1" style="display:none">
+                Name: <var>Farida Mousa</var><br/>
+                 Account Number: <var>1234</var><br/>
+                 Balance: <var>1000000000</var><br/>
+                 Status: <var>Open</var> <br/><br/>
+                 Transaction 1 <br/>
+                    Date: <var>01/04/2023</var> <br/>
+                    Type of Transaction: <var>ATM Withdrawal</var> <br/>
+                    Amount: <var>100 EGP</var> <br/><br/>
+                 Transaction 2 <br/>
+                    Date: <var>24/04/2023</var> <br/>
+                    Type of Transaction: <var>Withdrawal</var> <br/>
+                    Amount: <var>1700 EGP</var> <br/><br/>
+            </div> 
+            <div id="c2" style="display:none">
+                Name: <var>Farida Mousa</var><br/>
+                Account Number: <var>5678</var><br/>
+                 Balance: <var>2600000</var><br/>
+                 Status: <var>Open</var><br/><br/>
+                 Transaction 1 <br/>
+                 Date: <var>12/04/2023 </var><br/>
+                 Type of Transaction: <var>Transfer from Domestic Account</var> <br/>
+                 Amount:<var> 9856 EGP </var><br/><br/>
+                 Transaction 2 <br/>
+                 Date: <var>30/04/2023 </var><br/>
+                 Type of Transaction: <var>Monthly Service Fee </var><br/>
+                 Amount: <var>10 EGP </var><br/>
+
+            </div> 
+            <div id="c3" style="display:none">
+                Name: <var>Aaron Warner</var><br/>
+                Account Number: <var>9876</var><br/>
+                Balance: <var>60000</var><br/>
+                Status:<var>Open</var><br/><br/>
+                Transaction 1 <br/>
+                    Date: <var>10/04/2023 </var><br/>
+                    Type of Transaction: <var>Deposit </var><br/>
+                    Amount: <var>2500 EGP </var><br/><br/>
+                Transaction 2 <br/>
+                    Date: <var>29/04/2023</var> <br/>
+                    Type of Transaction: <var>Monthly Service Fee</var> <br/>
+                    Amount: <var>10 EGP</var> <br/><br/> 
+            </div> 
+            <button class ="btn"  type="button" onclick="showDetails()">Show Bank Account</button> 
+            <button class ="btn"  type="button" onclick="window.location.href='banker.html'">Go Back To Home Page</button>
+            <script>
+                function showDetails(){
+                    c1.style.display = "none";
+                    c2.style.display = "none";
+                    if(document.getElementById("name").value == ""){
+                        alert("Enter a Name");
+                    }
+                    else if(document.getElementById("num").value == ""){
+                        alert("Enter Credit Card Number");
+                    }
+                    else if(document.getElementById("name").value == "Farida Mousa"){
+                        if(document.getElementById("num").value == "1234"){
+                            c1.style.display = "block";
+                            c2.style.display = "none";
+                            c3.style.display = "none";
+                        }
+                        else if(document.getElementById("num").value == "5678"){
+                            c2.style.display = "block";
+                            c1.style.display = "none";
+                            c3.style.display = "none";
+                        }
+                    }
+                    else if(document.getElementById("name").value == "Aaron Warner"){
+                            c3.style.display = "block";
+                            c1.style.display = "none";
+                            c2.style.display = "none";
+                    }
+
+                }
+            </script>
+    </body>
+  </head>  
+</html>

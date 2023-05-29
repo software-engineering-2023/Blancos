@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="viewclientaccount.css">
+
+    <title>
+        Client Bank Accounts
+    </title>
+    <body>
+        <h1>Client Bank Accounts</h1>
+        <label>Enter Client Name</label>
+            <input type="text" placeholder="Client Name" id="name" name="name" >
+            <br/>
+            <div id="c1" style="display:none">
+                Name: <var>Farida Mousa</var><br/>
+                Account Number: <var>1234</var><br/>
+                Account Number:<var>5678</var>
+            </div> 
+            <div id="c2" style="display:none">
+                Name: <var>Aaron Warner</var><br/>
+                Account Number: <var>9876</var><br/>
+            </div> 
+            <button class ="btn"  type="button" onclick="showDetails()">Show Client Bank Accounts</button> 
+            <button class ="btn"  type="button" onclick="window.location.href='banker.html'">Go Back To Home Page</button>
+            <script>
+                function showDetails(){
+                    c1.style.display = "none";
+                    c2.style.display = "none";
+                    if(document.getElementById("name").value == ""){
+                        alert("Enter a Name");
+                    }
+                    else if(document.getElementById("name").value == "Farida Mousa"){
+                        c1.style.display = "block";
+                    }
+                    else if(document.getElementById("name").value == "Aaron Warner"){
+                        c2.style.display = "block";
+                    }
+
+                }
+            </script>
+    </body>
+  </head>  
+</html>

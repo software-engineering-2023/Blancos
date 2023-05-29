@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="viewclientcards.css">
+
+    <title>
+        Client Credit Cards
+    </title>
+    <body>
+        <h1>Client Credit Cards</h1>
+        <label>Enter Client Name</label>
+            <input type="text" placeholder="Client Name" id="name" name="name" >
+            <br/>
+            <div id="c1" style="display:none">
+                Name: <var>Farida Mousa</var><br/>
+                Credit Card Number: <var>1589</var><br/>
+                Credit Card Number: <var>1586</var><br/>
+            </div> 
+            <div id="c2" style="display:none">
+                Name: <var>Aaron Warner</var><br/>
+                Credit Card Number: <var>2300</var><br/>
+            </div> 
+            <button class ="btn"  type="button" onclick="showDetails()">Show Client Credit Cards</button> 
+            <!-- <button class ="btn"  type="button" onclick="window.location.href='viewacreditcard.html'">Show Credit Card Details</button> -->
+            <button class ="btn"  type="button" onclick="window.location.href='banker.html'">Go Back To Home Page</button>
+            <script>
+                function showDetails(){
+                    c1.style.display = "none";
+                    c2.style.display = "none";
+                    if(document.getElementById("name").value == ""){
+                        alert("Enter a Name");
+                    }
+                    else if(document.getElementById("name").value == "Farida Mousa"){
+                        c1.style.display = "block";
+                    }
+                    else if(document.getElementById("name").value == "Aaron Warner"){
+                        c2.style.display = "block";
+                    }
+
+                }
+            </script>
+    </body>
+  </head>  
+</html>
