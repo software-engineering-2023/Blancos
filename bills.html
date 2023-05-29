@@ -1,0 +1,52 @@
+<html>
+<head>
+
+    <link rel="stylesheet" href="bills.css">
+</head>
+<body>
+    <header>
+        <h1>My bills</h1>
+    </header>
+    <div class="container">
+        <label>Account Number: <var>23470873</var></label>
+        <br/>
+        <label>Gas: <var>75</var></label>
+        <br/>
+        <label>Deadline for payment: <var>1/6/2023</var></label>
+        <br/>
+        <br/>
+        <label>Water: <var>120</var></label>
+        <br/>
+        <label>Deadline for payment: <var>31/5/2023</var></label>
+        <br/>
+        <br/>
+        <label>Electricity: <var>1075</var></label>
+        <br/>
+        <label>Deadline for payment: <var>31/5/2023</var></label>
+        <br/>
+        <br/>
+        <label>Telephone bill: <var>200</var></label>
+        <br/>
+        <label>Deadline for payment: <var>1/6/2023</var></label>
+        <br/>
+        <label for="party">Choose a Third Party App:</label>
+        <select id="party" name="party">
+            <option value="">Select a Third Party App</option>
+            <option value="none">None</option>
+            <option value="fawry">Fawry</option>
+        </select>
+        <br/>
+        <button class="btn" type="button" onclick="showAlert()">Pay Bills</button>
+        <button class="btn" type="button" onclick="window.location.href='homepage.html'">Go Back to Home Page</button>
+    </div>
+    <script>
+        function showAlert() {
+            if (document.getElementById("party").value == "") {
+                alert("Select a Third Party App");
+            } else {
+                alert("Bills Paid!");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="cardrequests.css">
+
+        <title>
+            Credit Card Requests
+        </title>
+        <body>
+            <h1>Requests</h1>
+            First Name: <var>Aaron</var>
+            <br/>
+            Last Name: <var>Warner</var>
+            <br/>
+            National ID: <var>345678989544</var>
+            <br/>
+            Date of Birth: <var>24/04/2002</var>
+            <br/>
+            Email: <var>aaron@gmail.com</var>
+            <br/>
+            Phone: <var>01008765443</var>
+            <br/>
+            Address: <var>New Cairo</var>
+            <br/>
+            Account Number: <var>1234</var>
+            <br/>
+            Income: <var>250000</var>
+            <br/><br/>
+            <button class ="btn"  type="button" onclick="showAlert()">Accept!</button>
+            <button class ="btn"  type="button" onclick="showAlert2()">Reject</button>
+            <button class ="btn"  type="button" onclick="window.location.href='requests.html'">Check other requests</button>
+            <button class ="btn"  type="button" onclick="window.location.href='banker.html'">Go Back To Home Page</button>
+            <script>
+                function showAlert(){
+                    alert("Request Accepted");
+                }
+                function showAlert2(){
+                    alert("Request Rejected");
+                }
+            </script>
+        </body>
+    </head>
+</html>

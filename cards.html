@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="cards.css" />
+        <title>
+            Credit Cards
+        </title>
+        <body>
+            
+            <h1> Enter Your Credit Card Number</h1>
+            <br/>
+            <div class="container">
+            <input type="text" placeholder="Your Credit Card Number" id ="num" name="num">
+            <br/>
+            <br/>
+            <button class ="btn" type="button" onclick="validateForm()" >View Info!</button>
+            <button class ="btn" type="button" onclick="window.location.href='applyforcard.html'" >Apply!</button>
+            <button class ="btn" type="button" onclick="window.location.href='reportcard.html'" >Report Card</button>
+            <button class ="btn" type="button"  onclick="window.location.href='cardtransaction.html'" >View Transactions!</button>
+            <script>
+                function validateForm(){
+                    
+                    if(document.getElementById("num").value === ""){
+                        alert("Enter Credit Card Number!");
+                    }
+                    else{
+                        window.location.href="cardinfo.html";
+                    }
+            }
+            </script>
+            </div>
+        </body>
+    </head>
+</html>
